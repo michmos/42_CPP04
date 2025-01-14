@@ -4,9 +4,12 @@
 
 #include <string>
 #include <iostream>
+#include "Brain.hpp"
 #include "Animal.hpp"
 
 class	Cat : public Animal {
+private:
+	Brain		*_brain;
 public:
 	Cat();
 	Cat(const Cat& toCopy);
@@ -14,6 +17,7 @@ public:
 
 	Cat&	operator=(const Cat& toAssign);
 	void	makeSound() const override;
+	Brain&	getBrain() const;
 };
 
 #endif

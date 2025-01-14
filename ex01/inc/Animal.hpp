@@ -4,12 +4,10 @@
 
 #include <string>
 #include <iostream>
-#include "Brain.hpp"
 
 class	Animal {
 protected:
 	std::string	_type;
-	Brain		*_brain;
 public:
 	Animal();
 	Animal(const std::string& _type);
@@ -20,7 +18,6 @@ public:
 
 	const std::string& getType() const;
 	virtual void	makeSound() const;
-	Brain& getBrain() const;
 };
 
 #endif

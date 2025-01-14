@@ -7,13 +7,13 @@ Animal::Animal() : Animal("Unknown") {
 	#endif
 }
 
-Animal::Animal(const std::string& type) : _type(type), _brain(new Brain()) {
+Animal::Animal(const std::string& type) : _type(type) {
 	#ifdef DEBUG
 	std::cout << "[Animal] param constructor called" << std::endl;
 	#endif
 }
 
-Animal::Animal(const Animal& toCopy) : _brain(new Brain()) {
+Animal::Animal(const Animal& toCopy) {
 	#ifdef DEBUG
 	std::cout << "[Animal] copy constructor called" << std::endl;
 	#endif
@@ -24,7 +24,6 @@ Animal::~Animal() {
 	#ifdef DEBUG
 	std::cout << "[Animal] destructor called" << std::endl;
 	#endif
-	delete _brain;
 }
 
 Animal& Animal::operator=(const Animal& toAssign) {
@@ -33,7 +32,6 @@ Animal& Animal::operator=(const Animal& toAssign) {
 	#endif
 	if (this != &toAssign) {
 		_type = toAssign._type;
-		*_brain = *toAssign._brain;
 	}
 	return (*this);
 }
@@ -45,8 +43,4 @@ const std::string& Animal::getType() const {
 
 void	Animal::makeSound() const {
 	std::cout << "Standard animal sound" << std::endl;
-}
-
-Brain& Animal::getBrain() const {
-	return (*_brain);
 }
