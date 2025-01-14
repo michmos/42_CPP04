@@ -22,7 +22,7 @@ WrongCat::~WrongCat() {
 
 WrongCat& WrongCat::operator=(const WrongCat& toCopy) {
 	#ifdef DEBUG
-	std::cout << "[WrongCat] copy constructor called" << std::endl;
+	std::cout << "[WrongCat] assignment operator called" << std::endl;
 	#endif
 	if (this != &toCopy) {
 		WrongAnimal::operator=(toCopy);

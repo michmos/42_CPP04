@@ -29,7 +29,7 @@ Animal::~Animal() {
 
 Animal& Animal::operator=(const Animal& toCopy) {
 	#ifdef DEBUG
-	std::cout << "[Animal] copy constructor called" << std::endl;
+	std::cout << "[Animal] assignment operator called" << std::endl;
 	#endif
 	if (this != &toCopy) {
 		_type = toCopy._type;

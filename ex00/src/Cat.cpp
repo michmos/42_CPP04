@@ -22,7 +22,7 @@ Cat::~Cat() {
 
 Cat& Cat::operator=(const Cat& toCopy) {
 	#ifdef DEBUG
-	std::cout << "[Cat] copy constructor called" << std::endl;
+	std::cout << "[Cat] assignment operator called" << std::endl;
 	#endif
 	if (this != &toCopy) {
 		Animal::operator=(toCopy);

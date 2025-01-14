@@ -22,7 +22,7 @@ Dog::~Dog() {
 
 Dog& Dog::operator=(const Dog& toCopy) {
 	#ifdef DEBUG
-	std::cout << "[Dog] copy constructor called" << std::endl;
+	std::cout << "[Dog] assignment operator called" << std::endl;
 	#endif
 	if (this != &toCopy) {
 		Animal::operator=(toCopy);

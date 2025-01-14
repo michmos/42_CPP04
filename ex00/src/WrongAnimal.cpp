@@ -29,7 +29,7 @@ WrongAnimal::~WrongAnimal() {
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& toCopy) {
 	#ifdef DEBUG
-	std::cout << "[WrongAnimal] copy constructor called" << std::endl;
+	std::cout << "[WrongAnimal] assignment operator called" << std::endl;
 	#endif
 	if (this != &toCopy) {
 		_type = toCopy._type;
