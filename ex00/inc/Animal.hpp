@@ -12,7 +12,7 @@ public:
 	Animal();
 	Animal(const std::string& _type);
 	Animal(const Animal& toCopy);
-	~Animal();
+	virtual ~Animal();
 
 	Animal&	operator=(const Animal& toAssign);
 
