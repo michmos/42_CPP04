@@ -7,7 +7,7 @@ Cat::Cat() : Animal("Cat") {
 	#endif
 }
 
-Cat::Cat(const Cat& toCopy) {
+Cat::Cat(const Cat& toCopy) : Animal("Cat") {
 	#ifdef DEBUG
 	std::cout << "[Cat] copy constructor called" << std::endl;
 	#endif
